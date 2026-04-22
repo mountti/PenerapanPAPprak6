@@ -4,7 +4,6 @@ body {
     position: relative;
 }
 
-/* BACKGROUND BLUR */
 body::before {
     content: "";
     position: fixed;
@@ -18,13 +17,11 @@ body::before {
     z-index: -1;
 }
 
-/* BIAR KONTEN DI ATAS */
 .container, header, nav, footer {
     position: relative;
     z-index: 1;
 }
 
-/* HEADER */
 header {
     text-align: center;
     padding: 40px;
@@ -50,7 +47,6 @@ header::after {
     z-index: -1;
 }
 
-/* NAV */
 nav {
     text-align: center;
     padding: 10px;
@@ -70,12 +66,10 @@ nav a:hover {
     color: #ff3cac;
 }
 
-/* LAYOUT */
 .container {
     display: flex;
 }
 
-/* SIDEBAR */
 aside {
     width: 25%;
     padding: 20px;
@@ -126,13 +120,11 @@ aside li:hover {
     transform: translateX(5px);
 }
 
-/* CONTENT */
 main {
     width: 75%;
     padding: 20px;
 }
 
-/* MUSIC GRID */
 .music-list {
     display: flex;
     flex-wrap: wrap;
@@ -140,7 +132,6 @@ main {
     gap: 25px;
 }
 
-/* CARD */
 .card {
     width: 200px;
     background: rgba(255, 255, 255, 0.85);
@@ -166,7 +157,6 @@ main {
     transform: translateY(-10px);
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 15px;
