@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* BACKGROUND BLUR */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("summer.avif") no-repeat center/cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* BIAR KONTEN DI ATAS */
+.container, header, nav, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("summer.avif") center/cover;
+    filter: blur(5px);
+    z-index: -2;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* biar teks kebaca */
+    z-index: -1;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff3cac;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+aside {
+    width: 25%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    margin: 15px;
+}
+
+aside li {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+aside li:hover {
+    background: #ff3cac;
+    color: white;
+}
+
+aside h3 {
+    margin-bottom: 15px;
+    color: #ff3cac;
+}
+
+aside li:hover {
+    transform: translateX(5px);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+aside li:hover {
+    background: #ff3cac;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* CONTENT */
+main {
+    width: 75%;
+    padding: 20px;
+}
+
+/* MUSIC GRID */
+.music-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    width: 200px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 a {
+    text-decoration: none;
+    color: #ff3cac;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #ff7e5f;
+    color: white;
+}
+
+footer img {
+    margin: 5px;
+    transition: 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+footer a {
+    text-decoration: none;
+}
